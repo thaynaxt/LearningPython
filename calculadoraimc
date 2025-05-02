@@ -1,0 +1,163 @@
+def calcular_imc():
+    peso = float(input("Digite seu peso (kg): "))
+    altura = float(input("Digite sua altura (m): "))
+    idade = int(input('Digite sua idade: '))
+    imc = peso / (altura ** 2)
+
+    print(f"Seu IMC é: {imc}")
+
+    if idade < 65:
+        if imc <= 18.5:
+            print("Você está abaixo do peso ideal!")
+        elif 18.5 < imc <= 24.9:
+            print("Você está no peso ideal!")
+        elif 24.9 < imc <= 29.9:
+            print("Você está com sobrepeso!")
+        else:
+            print("Você está com obesidade!")
+
+    else:
+        if imc <= 22:
+            print("Você está abaixo do peso ideal!")
+        elif 22 < imc <= 29.9:
+            print("Você está no peso ideal!")
+        elif 30 <= imc <= 34.9:
+            print("Você está com sobrepeso!")
+        else:
+            print("Você está com obesidade!")
+
+def sugestao_alimentacao():
+    print("\nQual seu objetivo:")
+    print("1. Perder peso")
+    print("2. Aumentar massa muscular")
+    print("3. Manter o peso")
+
+    objetivo = input("Digite o número do seu objetivo:")
+
+    if objetivo == "1":
+      print("Dicas para emagrecer: \n "
+            "Consuma mais: \n "
+            "1. Alimentos naturais e não processados\n"
+            "- Verduras e legumes (ex: brócolis, espinafre, cenoura).\n"
+            "- Frutas (ex: maçã, morango, melancia).\n"
+            "\n"
+            "2. Proteínas magras\n"
+            "- Carnes magras (ex: frango, peixe).\n"
+            "- Ovos, leguminosas (feijão, lentilha).\n"
+            "\n"
+            "3. Carboidratos integrais\n"
+            "- Arroz integral, batata-doce, quinoa, pão integral.\n"
+            "\n"
+            "4. Gorduras saudáveis\n"
+            "- Abacate, azeite de oliva, castanhas, peixes gordos (salmão, sardinha).\n"
+            "\n"
+            "Exemplo de cardápio:\n"
+            "- Café da manhã: Pão integral com ovos mexidos, fruta e café sem açucar.\n"
+            "- Almoço: Salada, filé de frango, arroz e legumes.\n"
+            "- Lanches: Iogurte natural com frutas.\n"
+            "- Jantar: Omelete com frango e salada.\n"
+            "\n"
+            "Dica: Coma devagar e controle as porções. Evite beliscar entre as refeições e escolha sempre opções saudáveis. Se sentir fome, tente comer uma fruta. Se sentir sede, beba apenas água.")
+
+    elif objetivo == "2":
+        print("Dicas para aumentar a massa muscular de forma saudável: \n"
+              "Consuma com equilíbrio e foco em proteínas: \n"
+              "1. Alimentos naturais e nutritivos\n"
+              "- Verduras e legumes (ex: brócolis, espinafre, couve, pepino, abóbora).\n"
+              "- Frutas (ex: banana, maçã, manga, abacaxi) para fornecer energia e nutrientes.\n"
+              "\n"
+              "2. Proteínas para o crescimento muscular\n"
+              "- Carnes magras (ex: frango, peixe, carne bovina magra).\n"
+              "- Ovos (excelente fonte de proteína e aminoácidos).\n"
+              "- Leguminosas como feijão, lentilha, grão-de-bico, e fontes vegetais de proteína.\n"
+              "\n"
+              "3. Carboidratos complexos para energia\n"
+              "- Arroz, batata-doce, mandioca, macarrão integral, quinoa.\n"
+              "- Pão, aveia, tapioca, cuscuz e batatas.\n"
+              "\n"
+              "4. Gorduras saudáveis para manter o corpo em equilíbrio\n"
+              "- Azeite de oliva, abacate, castanhas, sementes de chia, linhaça e nozes.\n"
+              "- Evite frituras e alimentos com gorduras saturadas em excesso.\n"
+              "\n"
+              "5. Hidratação e suplementos\n"
+              "- Beba bastante água durante o dia para evitar a desidratação.\n"
+              "- Considere o uso de suplementos de proteína como whey protein, se necessário, mas sempre com orientação profissional.\n"
+              "\n"
+              "Exemplo de cardápio para aumentar a massa muscular:\n"
+              "- Café da manhã: Omelete com 4 claras e 1 gema, pão integral, banana e café.\n"
+              "- Almoço: Arroz, feijão, filé de frango grelhado, brócolis e salada.\n"
+              "- Lanches: Iogurte natural com granola e castanhas, ou shake de proteína com frutas.\n"
+              "- Jantar: Carne magra (frango ou peixe) com batata-doce ou quinoa e legumes.\n"
+              "\n")
+
+    elif objetivo == "3":
+        print("Dicas para manter o peso de forma simples e saudável: \n"
+              "Consuma com equilíbrio: \n"
+              "1. Alimentos naturais e frescos\n"
+              "- Verduras e legumes (ex: alface, tomate, cenoura, pepino, couve).\n"
+              "- Frutas da estação (ex: banana, maçã, laranja, mamão).\n"
+              "\n"
+              "2. Proteínas magras\n"
+              "- Carne de frango, peixe, carne bovina magra (ex: patinho, coxão mole).\n"
+              "- Ovos e leguminosas como feijão, lentilha, grão-de-bico.\n"
+              "\n"
+              "3. Carboidratos saudáveis\n"
+              "- Arroz, feijão, batata-doce, mandioca e macarrão.\n"
+              "- Pão, tapioca e cuscuz com equilibro.\n"
+              "\n"
+              "4. Gorduras saudáveis\n"
+              "- Azeite de oliva, abacate, castanhas e sementes.\n"
+              "- Evite frituras e alimentos muito gordurosos.\n"
+              "\n"
+              "Exemplo de cardápio para manter o peso:\n"
+              "- Café da manhã: Pão carioca com ovos mexidos e café.\n"
+              "- Almoço: Arroz, feijão, filé de frango grelhado e salada a vontade.\n"
+              "- Lanches: Uma fruta ou iogurte natural.\n"
+              "- Jantar: Sanduíche natural com legumes\n"
+              "\n"
+              "Dica: Faça refeições equilibradas e evite exageros. Procure incluir alimentos frescos e naturais na sua rotina, mantendo uma alimentação simples e nutritiva. Não se esqueça de beber água e fazer suas refeições ao longo do dia.")
+
+    else :
+        print("Opção inválida, tente novamente.")
+
+def dicas_estilo_vida():
+    print("\nVocê tem dificuldade em manter um estilo de vida saúdavel? ")
+    print("Então você está no lugar certo!")
+    print("\nAqui estão algumas dicas acessíveis para manter um estilo de vida saudável:"
+    "\n1. Valorize o descanso mental: Com meditação, leitura ou simplesmente passar tempo em silêncio.\n"
+    "\n2. Conecte-se com a natureza: Tente passar um tempo ao ar livre, mesmo que seja na varanda ou em uma praça perto de sua casa.\n"
+    "\n3.Coma conscientemente: Preste atenção ao que você está comendo. Isso ajuda a perceber quando você está realmente satisfeito, prevenindo excessos.\n"
+    "\n4.Aproveite o poder das pausas curtas: Levante-se e movimente-se a cada hora, mesmo que seja por 2-3 minutos. Isso pode melhorar a circulação sanguínea e aumentar a energia.\n"
+    "\n5.Adapte seu ambiente: Organize sua casa ou espaço de trabalho de maneira a tornar as escolhas saudáveis mais fáceis. Deixe frutas visíveis e à mão, por exemplo.\n"
+    "\n6. Cultive hobbies criativos: Atividades como desenhar, pintar, cozinhar ou até mesmo jardinagem podem ser terapêuticas. Elas ajudam a reduzir o estresse, desenvolvem habilidades novas e proporcionam uma sensação de realização.\n"
+    "\n7. Pratique a gratidão: Fale uma  coisa por dia pelo qual você é grato(a).\n"
+     "\n8. Adapte seu exercício à sua rotina, não o contrário: Ao invés de tentar encontrar tempo para a academia, encontre maneiras de integrar o movimento ao seu dia, como subir escadas em vez de usar o elevador ou fazer pequenos treinos em casa.\n")
+
+def menu_principal():
+    nome = input("Digite seu nome: ")
+    print(f"\nOlá, {nome}! Seja bem-vindo ao HEALTH, nosso programa de saúde e bem-estar!")
+
+    while True:
+        print("-" * 70)
+        print("\nEscolha uma das opções:")
+        print("1. Calcular IMC")
+        print("2. Sugestões de alimentação com base no seu objetivo")
+        print("3. Dicas acessíveis para um estilo de vida saudável")
+        print("4. Sair")
+
+        opcao = input("Digite o número da opção escolhida:")
+        print("-" * 70)
+
+        if opcao == "1":
+            calcular_imc()
+        elif opcao == "2":
+            sugestao_alimentacao()
+        elif opcao == "3":
+            dicas_estilo_vida()
+        elif opcao == "4":
+            print("Nos vemos outra dia, obrigada pela presença!")
+            break
+        else:
+            print("Opção inválida, por favor tente novamente (1, 2, 3 ou 4).")
+
+menu_principal()
